@@ -13,6 +13,7 @@
     h1, h2, h3 {
         color: #FFFFFF;
         text-align: center; /* Center align headers */
+        font-size:3em;
     }
     .soundboard-container {
         width: 100%;
@@ -80,6 +81,24 @@
     </div>
 </div>
 
+<h2>Cosecha</h2>
+<div class="soundboard-container">
+    <div class="soundboard">
+        <div class="card" data-sound="Kuñifal Kongin" style="background-image: url('images/Kuñifal Kongin.jpg');"></div>
+        <div class="card" data-sound="Kiñe Küme Kongin" style="background-image: url('images/Kiñe Küme Kongin.jpg');"></div>
+        <div class="card" data-sound="Pür Kümey Kongin" style="background-image: url('images/Pür Kümey Kongin.jpg');"></div>
+        <div class="card" data-sound="Müna Kümey Kongin" style="background-image: url('images/Müna Kümey Kongin.jpg');"></div>
+        <div class="card" data-sound="Küme Wenu Ngey" style="background-image: url('images/Küme Wenu Ngey.jpg');"></div>
+        <div class="card" data-sound="Mawupi" style="background-image: url('images/Mawupi.jpg');"></div>
+        <div class="card" data-sound="Trowün" style="background-image: url('images/Trowün.jpg');"></div>
+        <div class="card" data-sound="Mon Mapu" style="background-image: url('images/Mon Mapu.jpg');"></div>
+        <div class="card" data-sound="Nan Lelfün" style="background-image: url('images/Nan Lelfün.jpg');"></div>
+        <div class="card" data-sound="Fün Mamüll" style="background-image: url('images/Fün Mamüll.jpg');"></div>
+        <div class="card" data-sound="Mapu Rokiñ" style="background-image: url('images/Mapu Rokiñ.jpg');"></div>
+        <div class="card" data-sound="Rüme Ilelkawün" style="background-image: url('images/Rüme Ilelkawün.jpg');"></div>
+    </div>
+</div>
+    
 <h3>Territorios</h3>
 <div class="soundboard-container Territorios">
     <div class="soundboard">
@@ -98,16 +117,18 @@
     </div>
 </div>
         
-    <script>
-        // JavaScript to play sounds when a card is clicked
-        const cards = document.querySelectorAll('.card');
+<script>
+    // JavaScript to play sounds when a card is clicked
+    const cards = document.querySelectorAll('.card');
 
-        cards.forEach(card => {
-            card.addEventListener('click', () => {
-                const soundName = card.getAttribute('data-sound');
-            });
+    cards.forEach(card => {
+        card.addEventListener('click', () => {
+            const soundName = card.getAttribute('data-sound');
+            const audio = new Audio(`audio/${soundName}.mp3`);
+            audio.play();
         });
-    </script>
+    });
+</script>
 
 </body>
 </html>
