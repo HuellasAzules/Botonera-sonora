@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartas - Huellas Azules</title>
+    <style>
+        /* CSS to style the soundboard */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 0;
+            padding: 20px;
+            background-color: #42A4BD;
+        }
+        h1 {
+            color: #FFFFFF; 
+        }
+        .soundboard-container {
+            width: 100%;
+            max-width: 1200px;
+        }
+        .soundboard {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); 
+            grid-template-rows: repeat(10, 1fr) auto;
+            gap: 10px;
+        }
+        .card {
+            padding-top: 150%; /* Aspect ratio of 2:3 (width:height) */
+            background-size: cover;
+            background-position: center;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            position: relative;
+        }
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>CARTAS DE EXPLORACIÓN</h1>
+    <div class="soundboard-container">
+        <div class="soundboard">
+             <div class="card" data-sound="Kushe Papai" style="background-image: url('images/Kushe Papai.png');"></div>
+             <div class="card" data-sound="Ngürü" style="background-image: url('images/Ngürü.png');"></div>
+             <div class="card" data-sound="Kallfü Malen" style="background-image: url('images/Kallfü Malen.png');"></div>
+             <div class="card" data-sound="Mañke" style="background-image: url('images/Mañke.png');"></div>
+             <div class="card" data-sound="Zomo Inal Longko" style="background-image: url('images/Zomo Inal Longko.png');"></div>
+             <div class="card" data-sound="Foye" style="background-image: url('images/Foye.png');"></div>
+             <div class="card" data-sound="Pangi" style="background-image: url('images/Pangi.png');"></div>
+             <div class="card" data-sound="Kollöng" style="background-image: url('images/Kollöng.png');"></div>
+             <div class="card" data-sound="Llampudzkeñ" style="background-image: url('images/Llampudzkeñ.png');"></div>
+             <div class="card" data-sound="Maki" style="background-image: url('images/Maki.png');"></div>
+             <div class="card" data-sound="Txegul" style="background-image: url('images/Txegul.png');"></div>
+             <div class="card" data-sound="Liwen Antü" style="background-image: url('images/Liwen Antü.png');"></div>
+             <div class="card" data-sound="Rangi Antü" style="background-image: url('images/Rangi Antü.png');"></div>
+             <div class="card" data-sound="Naq Antü" style="background-image: url('images/Naq Antü.png');"></div>
+             <div class="card" data-sound="Mawün" style="background-image: url('images/Mawün.png');"></div>
+             <div class="card" data-sound="Lai Antü" style="background-image: url('images/Lai Antü.png');"></div>
+             <div class="card" data-sound="Pewma" style="background-image: url('images/Pewma.png');"></div>
+             <div class="card" data-sound="Pewen Lemu" style="background-image: url('images/Pewen Lemu.png');"></div>
+             <div class="card" data-sound="Wangelen" style="background-image: url('images/Wangelen.png');"></div>
+             <div class="card" data-sound="Kallkü" style="background-image: url('images/Kallkü.png');"></div>
+             <div class="card" data-sound="Pillan Mawiza" style="background-image: url('images/Pillan Mawiza.png');"></div>
+             <div class="card" data-sound="Apoy Küllen" style="background-image: url('images/Apoy Küllen.png');"></div>
+             <div class="card" data-sound="Füta Leüfü" style="background-image: url('images/Füta Leüfü.png');"></div>
+             <div class="card" data-sound="Xalkan" style="background-image: url('images/Xalkan.png');"></div>
+             <div class="card" data-sound="Kürüf" style="background-image: url('images/Kürüf.png');"></div>
+             <div class="card" data-sound="Karün" style="background-image: url('images/Karün.png');"></div>
+             <div class="card" data-sound="Füta Mangin" style="background-image: url('images/Füta Mangin.png');"></div>
+             <div class="card" data-sound="Ngelay Pewmatun" style="background-image: url('images/Ngelay Pewmatun.png');"></div>
+             <div class="card" data-sound="Welen" style="background-image: url('images/Welen.png');"></div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to play sounds when a card is clicked
+        const cards = document.querySelectorAll('.card');
+
+        cards.forEach(card => {
+            card.addEventListener('click', () => {
+                const soundName = card.getAttribute('data-sound');
+                const audio = new Audio(`audio/${soundName}.mp3`);
+                audio.play();
+            });
+        });
+    </script>
+
+</body>
+</html>
+
