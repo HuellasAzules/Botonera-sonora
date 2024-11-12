@@ -26,7 +26,7 @@
     }
     .card {
         width: 100%;
-        padding-top: 100%; /* This creates a square aspect ratio */
+        padding-top: 150%; /* This creates a square aspect ratio */
         background-size: cover;
         background-position: center;
         position: relative;
@@ -102,27 +102,31 @@
 <h3>Territorios</h3>
 <div class="soundboard-container Territorios">
     <div class="soundboard">
-        <div class="card" data-sound="Kuñifal Kongin" style="background-image: url('images/Kuñifal Kongin.jpg');"></div>
-        <div class="card" data-sound="Kiñe Küme Kongin" style="background-image: url('images/Kiñe Küme Kongin.jpg');"></div>
-        <div class="card" data-sound="Pür Kümey Kongin" style="background-image: url('images/Pür Kümey Kongin.jpg');"></div>
-        <div class="card" data-sound="Müna Kümey Kongin" style="background-image: url('images/Müna Kümey Kongin.jpg');"></div>
-        <div class="card" data-sound="Küme Wenu Ngey" style="background-image: url('images/Küme Wenu Ngey.jpg');"></div>
-        <div class="card" data-sound="Mawupi" style="background-image: url('images/Mawupi.jpg');"></div>
-        <div class="card" data-sound="Trowün" style="background-image: url('images/Trowün.jpg');"></div>
-        <div class="card" data-sound="Mon Mapu" style="background-image: url('images/Mon Mapu.jpg');"></div>
-        <div class="card" data-sound="Nan Lelfün" style="background-image: url('images/Nan Lelfün.jpg');"></div>
-        <div class="card" data-sound="Fün Mamüll" style="background-image: url('images/Fün Mamüll.jpg');"></div>
-        <div class="card" data-sound="Mapu Rokiñ" style="background-image: url('images/Mapu Rokiñ.jpg');"></div>
-        <div class="card" data-sound="Rüme Ilelkawün" style="background-image: url('images/Rüme Ilelkawün.jpg');"></div>
+        <div class="card" data-sound="Chasi Ko Lafken Mapu" style="background-image: url('images/Chasi Ko Lafken Mapu.jpg');"></div>
+        <div class="card" data-sound="Füta Lafken Mapu" style="background-image: url('images/Füta Lafken Mapu.jpg');"></div>
+        <div class="card" data-sound="Karü We Mapu" style="background-image: url('images/Karü We Mapu.jpg');"></div>
+        <div class="card" data-sound="Küra Malal Mapu" style="background-image: url('images/Küra Malal Mapu.jpg');"></div>
+        <div class="card" data-sound="Lafken Mapu" style="background-image: url('images/Lafken Mapu.jpg');"></div>
+        <div class="card" data-sound="Malal We Mapu" style="background-image: url('images/Malal We Mapu.jpg');"></div>
+        <div class="card" data-sound="Pewen Mapu" style="background-image: url('images/Pewen Mapu.jpg');"></div>
+        <div class="card" data-sound="Tchuel Tchuel Wapi Mapu" style="background-image: url('images/Tchuel Tchuel Wapi Mapu.jpg');"></div>
+        <div class="card" data-sound="Txenke Lafken Mapu" style="background-image: url('images/Txenke Lafken Mapu.jpg');"></div>
+        <div class="card" data-sound="Xawün Ko Mapu" style="background-image: url('images/Xawün Ko Mapu.jpg');"></div>
     </div>
 </div>
         
 <script>
     // JavaScript to play sounds when a card is clicked
+    let currentAudio = null;
     const cards = document.querySelectorAll('.card');
-
+    
     cards.forEach(card => {
         card.addEventListener('click', () => {
+            if (currentAudio) {
+            currentAudio.pause();
+            currentAudio.currentTime = 0; // Reset audio to start
+            }
+            
             const soundName = card.getAttribute('data-sound');
             const audio = new Audio(`audio/${soundName}.mp3`);
             audio.play();
