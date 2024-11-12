@@ -1,140 +1,103 @@
 <style>
-        /* CSS to style the soundboard */
-        body {
-            font-family: TT Chocolates, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            margin: 0;
-            padding: 20px;
-            background-color: #2eb2ce;
-        }
-        h1, h2, h3 {
-            color: #FFFFFF;
-        }
-        .soundboard-container {
-            width: 100%;
-            max-width: 1200px;
-        }
-        .soundboard {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-        }
-        .card {
-        .card:hover {
-            transform: scale(1.05);
-            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
-            /* Style specifically for the "Territorios" section */
-        .Territorios .soundboard {
-            grid-template-columns: repeat(2, 1fr); /* 2 columns for Territorios */
-        }
-        .Territorios .card {
-            padding-top: 75%; /* Aspect ratio for wider cards */
-        }
-    </style>
+    /* CSS to style the soundboard */
+    body {
+        font-family: 'TT Chocolates', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 0;
+        padding: 20px;
+        background-color: #2eb2ce;
+    }
+    h1, h2, h3 {
+        color: #FFFFFF;
+        text-align: center; /* Center align headers */
+    }
+    .soundboard-container {
+        width: 100%;
+        max-width: 1200px;
+    }
+    .soundboard {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+    .card {
+        width: 100%;
+        padding-top: 100%; /* This creates a square aspect ratio */
+        background-size: cover;
+        background-position: center;
+        position: relative;
+    }
+    .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    }
+    /* Style specifically for the "Territorios" section */
+    .Territorios .soundboard {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for Territorios */
+    }
+    .Territorios .card {
+        padding-top: 75%; /* Aspect ratio for wider cards */
+    }
+</style>
 </head>
 <body>
 
-    <h1>Exploración</h1>
-    <div class="soundboard-container">
-        <div class="soundboard">
-            <div class="card" data-sound="Kushe Papai" style="background-image: url('images/Kushe Papai.jpg');"></div>
-             <div class="card" data-sound="Ngürü" style="background-image: url('images/Ngürü.jpg');"></div>
-             <div class="card" data-sound="Kallfü Malen" style="background-image: url('images/Kallfü Malen.jpg');"></div>
-             <div class="card" data-sound="Mañke" style="background-image: url('images/Mañke.jpg');"></div>
-             <div class="card" data-sound="Zomo Inal Longko" style="background-image: url('images/Zomo Inal Longko.jpg');"></div>
-             <div class="card" data-sound="Foye" style="background-image: url('images/Foye.jpg');"></div>
-             <div class="card" data-sound="Pangi" style="background-image: url('images/Pangi.jpg');"></div>
-             <div class="card" data-sound="Kollöng" style="background-image: url('images/Kollöng.jpg');"></div>
-             <div class="card" data-sound="Llampudzkeñ" style="background-image: url('images/Llampudzkeñ.jpg');"></div>
-             <div class="card" data-sound="Maki" style="background-image: url('images/Maki.jpg');"></div>
-             <div class="card" data-sound="Txegul" style="background-image: url('images/Txegul.jpg');"></div>
-             <div class="card" data-sound="Liwen Antü" style="background-image: url('images/Liwen Antü.jpg');"></div>
-             <div class="card" data-sound="Rangi Antü" style="background-image: url('images/Rangi Antü.jpg');"></div>
-             <div class="card" data-sound="Naq Antü" style="background-image: url('images/Naq Antü.jpg');"></div>
-             <div class="card" data-sound="Mawün" style="background-image: url('images/Mawün.jpg');"></div>
-             <div class="card" data-sound="Lai Antü" style="background-image: url('images/Lai Antü.jpg');"></div>
-             <div class="card" data-sound="Pewma" style="background-image: url('images/Pewma.jpg');"></div>
-             <div class="card" data-sound="Pewen Lemu" style="background-image: url('images/Pewen Lemu.jpg');"></div>
-             <div class="card" data-sound="Wangelen" style="background-image: url('images/Wangelen.jpg');"></div>
-             <div class="card" data-sound="Kallkü" style="background-image: url('images/Kallkü.jpg');"></div>
-             <div class="card" data-sound="Pillan Mawiza" style="background-image: url('images/Pillan Mawiza.jpg');"></div>
-             <div class="card" data-sound="Apoy Küllen" style="background-image: url('images/Apoy Küllen.jpg');"></div>
-             <div class="card" data-sound="Füta Leüfü" style="background-image: url('images/Füta Leüfü.jpg');"></div>
-             <div class="card" data-sound="Xalkan" style="background-image: url('images/Xalkan.jpg');"></div>
-             <div class="card" data-sound="Kürüf" style="background-image: url('images/Kürüf.jpg');"></div>
-             <div class="card" data-sound="Karün" style="background-image: url('images/Karün.jpg');"></div>
-             <div class="card" data-sound="Füta Mangin" style="background-image: url('images/Füta Mangin.jpg');"></div>
-             <div class="card" data-sound="Ngelay Pewmatun" style="background-image: url('images/Ngelay Pewmatun.jpg');"></div>
-             <div class="card" data-sound="Welen" style="background-image: url('images/Welen.jpg');"></div>
-        </div>
-
-
-    <h2>Cosecha</h2>
-    <div class="soundboard-container">
-        <div class="soundboard">
-             <div class="card" data-sound="Kushe Papai" style="background-image: url('images/Kushe Papai.png');"></div>
-             <div class="card" data-sound="Ngürü" style="background-image: url('images/Ngürü.png');"></div>
-             <div class="card" data-sound="Kallfü Malen" style="background-image: url('images/Kallfü Malen.png');"></div>
-             <div class="card" data-sound="Mañke" style="background-image: url('images/Mañke.png');"></div>
-             <div class="card" data-sound="Zomo Inal Longko" style="background-image: url('images/Zomo Inal Longko.png');"></div>
-             <div class="card" data-sound="Foye" style="background-image: url('images/Foye.png');"></div>
-             <div class="card" data-sound="Pangi" style="background-image: url('images/Pangi.png');"></div>
-             <div class="card" data-sound="Kollöng" style="background-image: url('images/Kollöng.png');"></div>
-             <div class="card" data-sound="Llampudzkeñ" style="background-image: url('images/Llampudzkeñ.png');"></div>
-             <div class="card" data-sound="Maki" style="background-image: url('images/Maki.png');"></div>
-             <div class="card" data-sound="Txegul" style="background-image: url('images/Txegul.png');"></div>
-             <div class="card" data-sound="Liwen Antü" style="background-image: url('images/Liwen Antü.png');"></div>
-             <div class="card" data-sound="Rangi Antü" style="background-image: url('images/Rangi Antü.png');"></div>
-             <div class="card" data-sound="Naq Antü" style="background-image: url('images/Naq Antü.png');"></div>
-             <div class="card" data-sound="Mawün" style="background-image: url('images/Mawün.png');"></div>
-             <div class="card" data-sound="Lai Antü" style="background-image: url('images/Lai Antü.png');"></div>
-             <div class="card" data-sound="Pewma" style="background-image: url('images/Pewma.png');"></div>
-             <div class="card" data-sound="Pewen Lemu" style="background-image: url('images/Pewen Lemu.png');"></div>
-             <div class="card" data-sound="Wangelen" style="background-image: url('images/Wangelen.png');"></div>
-             <div class="card" data-sound="Kallkü" style="background-image: url('images/Kallkü.png');"></div>
-             <div class="card" data-sound="Pillan Mawiza" style="background-image: url('images/Pillan Mawiza.png');"></div>
-             <div class="card" data-sound="Apoy Küllen" style="background-image: url('images/Apoy Küllen.png');"></div>
-             <div class="card" data-sound="Füta Leüfü" style="background-image: url('images/Füta Leüfü.png');"></div>
-             <div class="card" data-sound="Xalkan" style="background-image: url('images/Xalkan.png');"></div>
-             <div class="card" data-sound="Kürüf" style="background-image: url('images/Kürüf.png');"></div>
-             <div class="card" data-sound="Karün" style="background-image: url('images/Karün.png');"></div>
-             <div class="card" data-sound="Füta Mangin" style="background-image: url('images/Füta Mangin.png');"></div>
-             <div class="card" data-sound="Ngelay Pewmatun" style="background-image: url('images/Ngelay Pewmatun.png');"></div>
-             <div class="card" data-sound="Welen" style="background-image: url('images/Welen.png');"></div>
-            <div class="card" data-sound="Kuñifal Kongin" style="background-image: url('images/Kuñifal Kongin.jpg');"></div>
-            <div class="card" data-sound="Kiñe Küme Kongin" style="background-image: url('images/Kiñe Küme Kongin.jpg');"></div>
-            <div class="card" data-sound="Pür Kümey Kongin" style="background-image: url('images/Pür Kümey Kongin.jpg');"></div>
-            <div class="card" data-sound="Müna Kümey Kongin" style="background-image: url('images/Müna Kümey Kongin.jpg');"></div>
-            <div class="card" data-sound="Küme Wenu Ngey" style="background-image: url('images/Küme Wenu Ngey.jpg');"></div>
-            <div class="card" data-sound="Mawupi" style="background-image: url('images/Mawupi.jpg');"></div>
-            <div class="card" data-sound="Trowün" style="background-image: url('images/Trowün.jpg');"></div>
-            <div class="card" data-sound="Mon Mapu" style="background-image: url('images/Mon Mapu.jpg');"></div>
-            <div class="card" data-sound="Nan Lelfün" style="background-image: url('images/Nan Lelfün.jpg');"></div>
-            <div class="card" data-sound="Fün Mamüll" style="background-image: url('images/Fün Mamüll.jpg');"></div>
-            <div class="card" data-sound="Mapu Rokiñ" style="background-image: url('images/Mapu Rokiñ.jpg');"></div>
-            <div class="card" data-sound="Rüme Ilelkawün" style="background-image: url('images/Rüme Ilelkawün.jpg');"></div>
-        </div>
-
-        <!-- New "Territorios" Section -->
-    <h3>Territorios</h3>
-    <div class="soundboard-container">
-        <div class="soundboard">
-            <div class="card" data-sound="Chasi Ko Lafken Mapu" style="background-image: url('images/Chasi Ko Lafken Mapu.jpg');"></div>
-            <div class="card" data-sound="Füta Lafken Mapu" style="background-image: url('images/Füta Lafken Mapu.jpg');"></div>
-            <div class="card" data-sound="Karü We Mapu" style="background-image: url('images/Karü We Mapu.jpg');"></div>
-            <div class="card" data-sound="Küra Malal Mapu" style="background-image: url('images/Küra Malal Mapu.jpg');"></div>
-            <div class="card" data-sound="Lafken Mapu" style="background-image: url('images/Lafken Mapu.jpg');"></div>
-            <div class="card" data-sound="Malal We Mapu" style="background-image: url('images/Malal We Mapu.jpg');"></div>
-            <div class="card" data-sound="Pewen Mapu" style="background-image: url('images/Pewen Mapu.jpg');"></div>
-            <div class="card" data-sound="Tchuel Tchuel Wapi Mapu" style="background-image: url('images/Tchuel Tchuel Wapi Mapu.jpg');"></div>
-            <div class="card" data-sound="Txenke Lafken Mapu" style="background-image: url('images/Txenke Lafken Mapu.jpg');"></div>
-            <div class="card" data-sound="Xawün Ko Mapu" style="background-image: url('images/Xawün Ko Mapu.jpg');"></div>
-        </div>
+<h1>Exploración</h1>
+<div class="soundboard-container">
+    <div class="soundboard">
+        <div class="card" data-sound="Kushe Papai" style="background-image: url('images/Kushe Papai.jpg');"></div>
+        <div class="card" data-sound="Ngürü" style="background-image: url('images/Ngürü.jpg');"></div>
+        <div class="card" data-sound="Kallfü Malen" style="background-image: url('images/Kallfü Malen.jpg');"></div>
+        <div class="card" data-sound="Mañke" style="background-image: url('images/Mañke.jpg');"></div>
+        <div class="card" data-sound="Zomo Inal Longko" style="background-image: url('images/Zomo Inal Longko.jpg');"></div>
+        <div class="card" data-sound="Foye" style="background-image: url('images/Foye.jpg');"></div>
+        <div class="card" data-sound="Pangi" style="background-image: url('images/Pangi.jpg');"></div>
+        <div class="card" data-sound="Kollöng" style="background-image: url('images/Kollöng.jpg');"></div>
+        <div class="card" data-sound="Llampudzkeñ" style="background-image: url('images/Llampudzkeñ.jpg');"></div>
+        <div class="card" data-sound="Maki" style="background-image: url('images/Maki.jpg');"></div>
+        <div class="card" data-sound="Txegul" style="background-image: url('images/Txegul.jpg');"></div>
+        <div class="card" data-sound="Liwen Antü" style="background-image: url('images/Liwen Antü.jpg');"></div>
+        <div class="card" data-sound="Rangi Antü" style="background-image: url('images/Rangi Antü.jpg');"></div>
+        <div class="card" data-sound="Naq Antü" style="background-image: url('images/Naq Antü.jpg');"></div>
+        <div class="card" data-sound="Mawün" style="background-image: url('images/Mawün.jpg');"></div>
+        <div class="card" data-sound="Lai Antü" style="background-image: url('images/Lai Antü.jpg');"></div>
+        <div class="card" data-sound="Pewma" style="background-image: url('images/Pewma.jpg');"></div>
+        <div class="card" data-sound="Pewen Lemu" style="background-image: url('images/Pewen Lemu.jpg');"></div>
+        <div class="card" data-sound="Wangelen" style="background-image: url('images/Wangelen.jpg');"></div>
+        <div class="card" data-sound="Kallkü" style="background-image: url('images/Kallkü.jpg');"></div>
+        <div class="card" data-sound="Pillan Mawiza" style="background-image: url('images/Pillan Mawiza.jpg');"></div>
+        <div class="card" data-sound="Apoy Küllen" style="background-image: url('images/Apoy Küllen.jpg');"></div>
+        <div class="card" data-sound="Füta Leüfü" style="background-image: url('images/Füta Leüfü.jpg');"></div>
+        <div class="card" data-sound="Xalkan" style="background-image: url('images/Xalkan.jpg');"></div>
+        <div class="card" data-sound="Kürüf" style="background-image: url('images/Kürüf.jpg');"></div>
+        <div class="card" data-sound="Karün" style="background-image: url('images/Karün.jpg');"></div>
+        <div class="card" data-sound="Füta Mangin" style="background-image: url('images/Füta Mangin.jpg');"></div>
+        <div class="card" data-sound="Ngelay Pewmatun" style="background-image: url('images/Ngelay Pewmatun.jpg');"></div>
+        <div class="card" data-sound="Welen" style="background-image: url('images/Welen.jpg');"></div>
     </div>
+</div>
 
+<h3>Territorios</h3>
+<div class="soundboard-container Territorios">
+    <div class="soundboard">
+        <div class="card" data-sound="Kuñifal Kongin" style="background-image: url('images/Kuñifal Kongin.jpg');"></div>
+        <div class="card" data-sound="Kiñe Küme Kongin" style="background-image: url('images/Kiñe Küme Kongin.jpg');"></div>
+        <div class="card" data-sound="Pür Kümey Kongin" style="background-image: url('images/Pür Kümey Kongin.jpg');"></div>
+        <div class="card" data-sound="Müna Kümey Kongin" style="background-image: url('images/Müna Kümey Kongin.jpg');"></div>
+        <div class="card" data-sound="Küme Wenu Ngey" style="background-image: url('images/Küme Wenu Ngey.jpg');"></div>
+        <div class="card" data-sound="Mawupi" style="background-image: url('images/Mawupi.jpg');"></div>
+        <div class="card" data-sound="Trowün" style="background-image: url('images/Trowün.jpg');"></div>
+        <div class="card" data-sound="Mon Mapu" style="background-image: url('images/Mon Mapu.jpg');"></div>
+        <div class="card" data-sound="Nan Lelfün" style="background-image: url('images/Nan Lelfün.jpg');"></div>
+        <div class="card" data-sound="Fün Mamüll" style="background-image: url('images/Fün Mamüll.jpg');"></div>
+        <div class="card" data-sound="Mapu Rokiñ" style="background-image: url('images/Mapu Rokiñ.jpg');"></div>
+        <div class="card" data-sound="Rüme Ilelkawün" style="background-image: url('images/Rüme Ilelkawün.jpg');"></div>
+    </div>
+</div>
+        
     <script>
         // JavaScript to play sounds when a card is clicked
         const cards = document.querySelectorAll('.card');
