@@ -1,5 +1,4 @@
 <style>
-    /* CSS to style the soundboard */
 
     @font-face {
     font-family: 'TT Chocolates';
@@ -20,7 +19,7 @@
     }
     h1, h2, h3 {
         color: #FFFFFF;
-        text-align: center; /* Center align headers */
+        text-align: center; 
         font-size:3em;
     }
     .soundboard-container {
@@ -34,7 +33,7 @@
     }
     .card {
         width: 100%;
-        padding-top: 150%; /* This creates a square aspect ratio */
+        padding-top: 150%; 
         background-size: cover;
         background-position: center;
         border: 1px solid #ddd;
@@ -49,10 +48,10 @@
     }
     /* Style specifically for the "Territorios" section */
     .Territorios .soundboard {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns for Territorios */
+        grid-template-columns: repeat(2, 1fr); 
     }
     .Territorios .card {
-        padding-top: 75%; /* Aspect ratio for wider cards */
+        padding-top: 75%; 
         background-size: cover;
         background-position: center;
         border: 1px solid #ddd;
@@ -100,7 +99,7 @@
     </div>
 </div>
 
-<h2>Cosecha</h2>
+<!--<h2>Cosecha</h2>
 <div class="soundboard-container">
     <div class="soundboard">
         <div class="card" data-sound="Kunifal_Kongin" style="background-image: url('images/Kunifal_Kongin.png');"></div>
@@ -132,7 +131,7 @@
         <div class="card" data-sound="Txenke_Lafken_Mapu" style="background-image: url('images/Txenke_Lafken_Mapu.png');"></div>
         <div class="card" data-sound="Xawun_Ko_Mapu" style="background-image: url('images/Xawun_Ko_Mapu.png');"></div>
     </div>
-</div>
+</div>-->
         
 <script>
     // JavaScript to play sounds when a card is clicked
@@ -143,7 +142,7 @@
         card.addEventListener('click', () => {
             if (currentAudio) {
             currentAudio.pause();
-            currentAudio.currentTime = 0; // Reset audio to start
+            currentAudio.currentTime = 0; 
             }
             
             const soundName = card.getAttribute('data-sound');
