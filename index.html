@@ -1,5 +1,13 @@
 <style>
     /* CSS to style the soundboard */
+
+    @font-face {
+    font-family: 'TT Chocolates';
+    src: url('fonts/TT_Chocolates_Trial_DemiBold.otf') format('truetype'); /* Adjust the path if necessary */
+    font-weight: normal;
+    font-style: normal;
+    }
+    
     body {
         font-family: 'TT Chocolates', sans-serif;
         display: flex;
@@ -82,7 +90,7 @@
         <div class="card" data-sound="Kallku" style="background-image: url('images/Kallku.png');"></div>
         <div class="card" data-sound="Pillan_Mawiza" style="background-image: url('images/Pillan_Mawiza.png');"></div>
         <div class="card" data-sound="Apoy_Kuyen" style="background-image: url('images/Apoy_Kuyen.png');"></div>
-        <div class="card" data-sound="Futa_Lefken" style="background-image: url('images/Futa_Lefken.png');"></div>
+        <div class="card" data-sound="Futa_Lafken" style="background-image: url('images/Futa_Lafken.png');"></div>
         <div class="card" data-sound="Xalkan" style="background-image: url('images/Xalkan.png');"></div>
         <div class="card" data-sound="Kuruf" style="background-image: url('images/Kuruf.png');"></div>
         <div class="card" data-sound="Karun" style="background-image: url('images/Karun.png');"></div>
@@ -141,6 +149,8 @@
             const soundName = card.getAttribute('data-sound');
             const audio = new Audio(`audio/${soundName}.mp3`);
             audio.play();
+
+            currentAudio = audio;
         });
     });
 </script>
