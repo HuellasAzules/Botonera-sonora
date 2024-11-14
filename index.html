@@ -81,14 +81,15 @@
         grid-template-columns: repeat(2, 1fr); 
     }
     .Territorios .card {
-        padding-top: 75%; 
-        background-size: cover;
-        background-position: center;
+        position: relative;
+        overflow: hidden; /* Hide overflow if the image aspect ratio doesn't match the container exactly */
         border: 1px solid #ddd;
         border-radius: 8px;
         cursor: pointer;
         transition: transform 0.2s, box-shadow 0.2s;
-        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .Texto-inicial {
